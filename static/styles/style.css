@@ -16,7 +16,7 @@ body {
 }
 
 .content {
-    margin-top: 110px;
+    margin-top: 80px;
 }
 
 img {
@@ -25,12 +25,15 @@ img {
 }
 
 .image>div>div>div>button {
+    border: none;
+    cursor: pointer;
     padding: 10px;
     border-radius: 60px;
     padding-left: 55px;
     padding-right: 55px;
     font-size: 1.2em;
     margin-top: 50px;
+    color: black;
     background-color: #FFF69D;
     font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
@@ -43,3 +46,9 @@ img {
     font-weight: 400;
     font-style: normal;
 }
+
+.image>div>div>div>button:hover {
+    background-color: black;
+    color: #FFF69D;
+}
+
