@@ -1,7 +1,7 @@
 document.getElementById('onclickButton').addEventListener('click', onClickButton);
 
-let tg = window.Telegram.WebApp;
-tg.expand();
+ const tg = window.Telegram.WebApp;
+ tg.expand();
 
 function onClickButton() {
 
@@ -20,6 +20,8 @@ function onClickButton() {
     } else if(cash > 700) {
         img.src = 'static/images/icon-money.png';
     }
+
+    p.innerHTML = tg.initDataUnsafe.user.first_name;
 
     document.getElementById('onclickButton').style.display = 'none';
     let response = tg.fetchData(tg.initDataUnsafe.user.id, cash);
