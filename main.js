@@ -1,6 +1,7 @@
 document.getElementById('onclickButton').addEventListener('click', onClickButton);
 
 let tg = window.Telegram.WebApp;
+tg.expand();
 
 function onClickButton() {
 
@@ -20,7 +21,8 @@ function onClickButton() {
         img.src = 'static/images/icon-money.png';
     }
 
-    tg.fetchData(tg.initDataUnsafe.user.id, cash);
+    document.getElementById('onclickButton').style.display = 'none';
+    let response = tg.fetchData(tg.initDataUnsafe.user.id, cash);
 
     tg.close();
 
