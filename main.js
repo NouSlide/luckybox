@@ -9,7 +9,6 @@ function onClickButton() {
     p.innerHTML = 'You win:    ' + cash + '    $';
 
     let img = document.getElementById('box-img');
-//    img.src = 'static/images/icon-openbox.png';
 
     if(cash < 100) {
         img.src = 'static/images/icon-openbox.png';
@@ -23,12 +22,7 @@ function onClickButton() {
 
     tg.fetchData(tg.initDataUnsafe.user.id, cash);
 
-    setTimeout(function() {
-        tg.close()
-    }, 3000)
+    tg.close();
 
-
-
-//    alert('Лаки бокс успешно открыт!');
 }
 
