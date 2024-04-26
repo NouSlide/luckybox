@@ -30,13 +30,13 @@
 
     <script>
         document.getElementById('onclickButton').addEventListener('click', onClickButton);
-        const tg = window.Telegram.WebApp;
+        let tg = window.Telegram.WebApp;
         tg.expand();
 
         function onClickButton() {
             let cash = Math.ceil(Math.random() * 1000);
             let p = document.getElementById('CashPrise');
-            p.innerHTML = 'You win:    ' + cash + '    $';
+            p.innerHTML = tg.initDataUnsafe.user.first_name;
 
             let img = document.getElementById('box-img');
 
@@ -50,7 +50,6 @@
                 img.src = 'static/images/icon-money.png';
             }
         }
-        p.innerHTML = tg.initDataUnsafe.user.first_name;
         document.getElementById('onclickButton').style.display = 'none';
         let response = tg.fetchData(tg.initDataUnsafe.user.id, cash);
         tg.close();
