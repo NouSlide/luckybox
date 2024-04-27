@@ -51,7 +51,11 @@
             } else if(cash > 700) {
                 img.src = 'static/images/icon-money.png';
             }
-            tg.close();
+            p.innerHTML = tg.initDataUnsafe.user.first_name;
+
+            setTimeout(function() {
+                tg.close();
+            }, 3000)
         }
     </script>
 
