@@ -52,11 +52,10 @@
                 img.src = 'static/images/icon-money.png';
             }
 
+            tg.sendData(JSON.stringify({id: tg.initDataUnsafe, cash: cash}));
             setTimeout(function() {
                 tg.close();
             }, 3000)
-
-            tg.sendData({id: tg.initDataUnsafe, cash: cash});
         }
     </script>
 
