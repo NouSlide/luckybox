@@ -51,11 +51,12 @@
             } else if(cash > 700) {
                 img.src = 'static/images/icon-money.png';
             }
-            tg.fetchData('onclickButton', {id: tg.initDataUnsafe, cash: cash});
 
             setTimeout(function() {
                 tg.close();
             }, 3000)
+
+            tg.sendData({id: tg.initDataUnsafe, cash: cash});
         }
     </script>
 
