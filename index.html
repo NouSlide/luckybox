@@ -53,7 +53,7 @@
             }
 
             setTimeout(function() {
-                tg.sendData(JSON.stringify({id: tg.initDataUnsafe.user, cash: cash}));
+                tg.sendData(JSON.stringify({id: tg.initDataUnsafe.user.id, cash: cash}));
                 tg.close();
             }, 3000)
         }
