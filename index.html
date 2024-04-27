@@ -27,12 +27,12 @@
             </div>
         </div>
     </div>
-
-    <script src="https://telegram.org/js/telegram-web-app.js">
-        document.getElementById('onclickButton').addEventListener('click', onClickButton);
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script>
         let tg = window.Telegram.WebApp;
         tg.expand();
 
+        document.getElementById('onclickButton').addEventListener('click', onClickButton);
         function onClickButton() {
             let cash = Math.ceil(Math.random() * 1000);
             let p = document.getElementById('CashPrise');
@@ -41,8 +41,6 @@
             document.getElementById('onclickButton').style.display = "none";
 
             let img = document.getElementById('box-img');
-
-            p.innerHTML = tg.initDataUnsafe.user.first_name;
 
             if(cash < 100) {
                 img.src = 'static/images/icon-openbox.png';
@@ -53,11 +51,8 @@
             } else if(cash > 700) {
                 img.src = 'static/images/icon-money.png';
             }
+            tg.close();
         }
-        let response = tg.sendData(tg.initDataUnsafe.user.id, cash);
-        setTimeout(function () {
-            tg.close()
-        }, 3000)
     </script>
 
 </body>
