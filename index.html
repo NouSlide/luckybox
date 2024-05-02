@@ -54,9 +54,9 @@
 
 
             setTimeout(function() {
-                tg.sendData(JSON.stringify({cash: cash}));
+                tg.sendData(String(cash));
                 tg.close();
-            }, 1500)
+            }, 1050)
         }
     </script>
 
