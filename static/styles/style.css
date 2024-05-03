@@ -13,9 +13,9 @@ body {
 
 
 .image>div {
-    width: 335px;
+    display: flex;
+    flex-direction: column;
     border-radius: 90px;
-    margin-left: 5px;
     background-color: #310048;
 }
 
