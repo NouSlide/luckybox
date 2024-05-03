@@ -1,5 +1,5 @@
 body {
-    background-image: url('/D:/Vladyslav/luckybox/static/images/gradient.jpg');
+    background-image: url('/D:/Vladyslav/luckybox/static/images/background.jpg');
     padding: 60px;
     margin: 0;
 }
@@ -90,7 +90,5 @@ img {
     font-style: normal;
 }
 
-.image>div>div>div>button:hover {
 
-}
 
