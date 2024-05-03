@@ -4,16 +4,7 @@ body {
     margin: 0;
 }
 
-.block {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    height: 505px;
-    margin-left: 520px;
-    margin-right: 520px;
-    border-radius: 60px;
-    background-color: #310048;
-}
+
 
 #cash {
     color: #2AC766;
@@ -24,6 +15,8 @@ body {
 .image>div {
     display: flex;
     flex-direction: column;
+    border-radius: 100px;
+    background-color: #310048;
 }
 
 .image>div>div {
