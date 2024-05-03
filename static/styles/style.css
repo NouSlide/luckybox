@@ -1,5 +1,5 @@
 body {
-    background-image: url('/D:/Vladyslav/luckybox/static/images/background.jpg');
+    background-image: url('../images/background.jpg');
     padding: 60px;
     margin: 0;
 }
