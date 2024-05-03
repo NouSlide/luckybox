@@ -9,11 +9,11 @@
     <link rel="stylesheet" href="static/styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=DynaPuff:wght@400..700&family=McLaren&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="image">
-        <div>
+        <div class="block">
             <div>
                 <h1 id="CashPrise">Lucky Box</h1>
             </div>
@@ -22,7 +22,10 @@
                     <img id="box-img" src="static/images/icon-box.png">
                 </div>
                 <div>
-                    <button id="onclickButton">Open</button>
+                    <button class="fake-but" id="noClick">open</button>
+                </div>
+                <div>
+                    <button class="normal-but" id="onclickButton">open</button>
                 </div>
             </div>
         </div>
@@ -35,10 +38,8 @@
         document.getElementById('onclickButton').addEventListener('click', onClickButton);
         function onClickButton() {
             let cash = Math.ceil(Math.random() * 1000);
-            let p = document.getElementById('CashPrise');
 
-            p.innerHTML = 'You win:     ' + cash + '     $'
-            document.getElementById('onclickButton').style.display = "none";
+            document.getElementById('CashPrise').innerHTML = `You win:    <span id="cash">${cash}</span>`
 
             let img = document.getElementById('box-img');
 
@@ -52,11 +53,13 @@
                 img.src = 'static/images/icon-money.png';
             }
 
+            document.getElementById('onclickButton').disabled = true
 
-            setTimeout(function() {
-                tg.sendData(String(cash));
-                tg.close();
-            }, 2750)
+            document.getElementById('onclickButton').style.opacity = 0.7;
+            document.getElementById('noClick').style.opacity = 0.001;
+
+
+            tg.sendData(String(cash));
         }
     </script>
 

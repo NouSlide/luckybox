@@ -1,7 +1,23 @@
 body {
-    background-color: #310048;
+    background-image: url('/D:/Vladyslav/luckybox/static/images/gradient.jpg');
+    padding: 60px;
     margin: 0;
-    padding: 0;
+}
+
+.block {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 505px;
+    margin-left: 520px;
+    margin-right: 520px;
+    border-radius: 60px;
+    background-color: #310048;
+}
+
+#cash {
+    color: #2AC766;
+    text-shadow: 0 0 20px #22A554;
 }
 
 
@@ -21,40 +37,60 @@ img {
     text-align: center;
 }
 
-.image>div>div>div>button {
+
+.fake-but {
     display: inline-block;
     border: none;
     cursor: pointer;
     padding: 10px;
     border-radius: 60px;
-    padding-left: 55px;
-    padding-right: 55px;
-    font-size: 1.2em;
-    margin-top: 50px;
-    color: black;
-    background-color: #FFF69D;
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: 400;
+    padding-left: 77px;
+    padding-right: 77px;
+    font-size: 1.3em;
+    margin-top: 65px;
+    color: #15FC89;
+    background-color: #15FC89;
+    font-family: "McLaren", sans-serif;
+    font-weight: 700;
     font-style: normal;
 }
 
+
+.normal-but {
+    position: relative;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 60px;
+    padding-left: 80px;
+    padding-right: 80px;
+    font-size: 1.3em;
+    margin-top: 65px;
+    color: black;
+    bottom: 123px;
+    background-color: white;
+    font-family: "McLaren", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
 .image>div>div>h1 {
-    color: #FFF69D;
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: 400;
+    color: white;
+    font-family: "McLaren", sans-serif;
+    font-weight: 700;
     font-style: normal;
 }
 
 .image>div>div>p {
-    color: #FFF69D;
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: 400;
+    color: white;
+    font-family: "McLaren", sans-serif;
+    font-weight: 700;
     font-style: normal;
-    margin-top: 70px;
 }
 
 .image>div>div>div>button:hover {
-    background-color: black;
-    color: #FFF69D;
+
 }
 
