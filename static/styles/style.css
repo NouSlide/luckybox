@@ -1,6 +1,6 @@
 body {
     background-image: url('../images/background.jpg');
-    padding: 0;
+    padding: 40px;
     margin: 0;
 }
 
@@ -15,7 +15,7 @@ body {
 .image>div {
     display: flex;
     flex-direction: column;
-    border-radius: 90px;
+    border-radius: 60px;
     background-color: #310048;
 }
 
