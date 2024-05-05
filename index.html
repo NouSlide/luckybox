@@ -35,11 +35,13 @@
         let tg = window.Telegram.WebApp;
         tg.expand();
 
+        tg.headerColor = '#ffffff';
+
         let cash = Math.ceil(Math.random() * 1000);
 
         document.getElementById('onclickButton').addEventListener('click', onClickButton);
         function onClickButton() {
-            document.getElementById('CashPrise').innerHTML = `You win:    <span id="cash">${cash}</span>`
+            document.getElementById('CashPrise').innerHTML = `You win:  <span id="cash">${cash}</span>`
             let img = document.getElementById('box-img');
 
             if(cash <= 200) {
@@ -54,9 +56,11 @@
 
             document.getElementById('onclickButton').style.opacity = 0.7;
             document.getElementById('noClick').style.opacity = 0.001;
-        }
 
-        tg.sendData(String(cash));
+            setTimeout( function() {
+                tg.sendData(String(cash));
+            }, 7000)
+        }
 
     </script>
 
