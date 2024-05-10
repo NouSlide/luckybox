@@ -13,7 +13,7 @@ body {
 
 
 .image>div {
-    margin: 25px;
+    margin: 30px;
     display: flex;
     flex-direction: column;
     border-radius: 60px;
