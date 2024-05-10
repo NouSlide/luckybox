@@ -1,6 +1,6 @@
 body {
     background-image: url('../images/gradient.jpg');
-    padding: 40px;
+    padding: 0;
     margin: 0;
 }
 
@@ -13,6 +13,7 @@ body {
 
 
 .image>div {
+    margin: 25px;
     display: flex;
     flex-direction: column;
     border-radius: 60px;
